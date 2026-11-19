@@ -44,13 +44,15 @@ def test_404_e_decisao_invalida():
     assert cli.patch("/relatos/x/decisao", json={"status": "talvez"}).status_code == 422
 
 
-def test_modulos_sem_implementacao_devolvem_stub():
+def test_modulos_sem_implementacao_devolvem_stub(monkeypatch):
+    monkeypatch.setattr(registro, "carregar", lambda slot: None)
     j = cli.post("/modulos/visao/analisar", files={"imagem": ("a.jpg", b"123", "image/jpeg")}).json()
     assert j["disponivel"] is False
     j = cli.post("/modulos/assistente/perguntar", json={"pergunta": "Como controlar lagarta no milho?"}).json()
     assert j["disponivel"] is False
     lista = cli.get("/modulos").json()
-    assert {m["chave"] for m in lista} == {"visao", "assistente", "corpus", "iot", "quantica", "governanca"}
+    assert {m["chave"] for m in lista} == {"visao", "assistente", "corpus", "iot", "cluster", "quantica", "governanca"}
+    assert all(not m["integrado"] for m in lista)
 
 
 def test_modulo_visao_real_e_plugado_sem_mexer_no_resto(monkeypatch):

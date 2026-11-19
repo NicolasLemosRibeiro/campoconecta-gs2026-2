@@ -1,0 +1,7 @@
+cenario,metodo,repeticoes,lote,pendentes_media,no_prazo_pct,altas_no_prazo_pct,distantes_no_prazo_pct,proximas_no_prazo_pct,km_medios,custo_objetivo_medio,tempo_mediano_ms,tempo_max_ms
+normal,gulosa,20,12,0,100.0,100.0,100.0,100.0,282.2,297.5,0.16,0.195
+normal,exata,20,12,0,100.0,100.0,100.0,100.0,196.3,221.3,0.186,0.535
+pico,gulosa,20,48,1,65.52,99.48,56.65,71.23,1149,4506.1,0.379,0.433
+pico,exata,20,48,0,65.83,100.0,62.5,67.98,944.9,2315.4,0.834,1.088
+severo,gulosa,20,96,48,21.04,78.25,16.29,24.12,1184.3,136538.4,0.404,0.517
+severo,exata,20,96,48,21.2,79.75,16.82,24.03,622.3,135913.9,1.985,2.239

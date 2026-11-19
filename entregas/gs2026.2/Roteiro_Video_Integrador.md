@@ -1,25 +1,75 @@
-# Roteiro do vídeo integrador CampoConecta
+﻿# Narração do vídeo integrado CampoConecta
 
-FIAP · Global Solution 2026.2 · Governança em IA & Business Analytics
-Duração-alvo 6 min 30 s · YouTube **Não listado** · Narração do grupo sobre telas e evidências
+Duração do corte 6 min 30 s. As faixas indicam onde encaixar os trechos. As telas já foram capturadas na versão integrada. Os segmentos de Cluster, Quântica e IoT mostram as evidências das entregas.
 
-| Tempo | O que mostrar | Pontos para falar com suas palavras |
-|---|---|---|
-| 0:00–0:23 | Título, nomes e diagrama do fluxo por alguns segundos. Corte para a interface. | Situe quem relata e quem confere. Apresente o problema de priorizar pedidos na assistência técnica. Indique que a gravação passará pelo fluxo público e pelas entregas locais. |
-| 0:23–1:24 | **Front.** Em Relatar problema, use “A bomba do poço quebrou e a horta está sem água desde ontem.” Deixe o CEP em branco. Envie. Destaque protocolo, fonte de triagem e aviso de conferência. No Painel do gestor, selecione o mesmo protocolo, insira comentário de teste e aprove. Filtre por Aprovado e mostre o registro. | O Streamlit chama a API. A sugestão fica pendente até a decisão. O protocolo liga o registro à aprovação. Mostre o feedback e os gráficos se couberem no tempo. |
-| 1:24–2:13 | **RPA.** No painel, acione **Processar lote de exemplo e preparar e-mail**. Mostre o relatório, a quarentena e abra a mensagem .eml mais recente da outbox. Enquadre o resumo do caso aprovado. | Pandas trata o CSV. ViaCEP enriquece quando disponível. A base SQLite é a mesma da tela. O robô seleciona os aprovados. O arquivo prova a preparação local. A execução arquivada leu 55 linhas, processou 52 e rejeitou três. |
-| 2:13–2:46 | **Cluster.** Alterne entre as duas capturas nativas Results do iSPD. Sobreponha “500 tarefas sintéticas”, “2 workers · 34,0034 s” e “4 workers · 17,00572 s”. | Os tempos são do simulador. Dobrar workers reduziu aproximadamente pela metade o tempo dessa carga de 136 MFlops por tarefa. A aplicação pública roda sem cluster implantado. |
-| 2:46–3:15 | **Quântica.** Mostre o gráfico ou tabela do benchmark clássico e a etapa do roadmap dedicada a medir a fila de revisão. | Entre 20 casos sintéticos, só seis acertos de urgência pelas regras. O plano começa medindo a espera e testando alocação clássica. QUBO é uma opção condicionada a resultados futuros. O benchmark do ZIP é clássico e usa visitas sintéticas. |
-| 3:15–4:01 | **Generative AI.** Na cópia local, aba Chuvas e enchentes. Pergunte “Posso passar de carro por uma rua alagada?” e mostre a fonte. Use depois uma pergunta do conjunto de abstenção ou uma consulta sobre situação atual de uma via. Mostre o rótulo de modo exibido. | A busca usa base curada própria. O Qwen local pode selecionar o trecho. O modo extrativo usa filtros. O grupo registrou 42/42 casos aprovados no fluxo em ambos os modos e 10/20 no teste isolado do 1,5B. Os conjuntos são do projeto. |
-| 4:01–4:33 | **PLN.** Abra a ferramenta separada e exiba os quatro JSONL e o painel de qualidade. Mostre um trecho com origem e os 24 casos reservados para avaliação. | A fábrica normaliza documentos e produz texto, perguntas e respostas e diálogos. Há curadoria e conjunto reservado. Esses arquivos ficaram independentes da base do assistente. |
-| 4:33–5:02 | **IoT.** Mostre a captura Model testing e, se o grupo tiver acesso ao projeto, um trecho curto da classificação visual no celular. Identifique na tela a origem da evidência. | O Sinal à Vista classifica fala, sirene e ambiente no aparelho. Destaque 15 acertos em gravações reservadas. O piloto relatado e o ensaio formal ao vivo têm evidências distintas. O vínculo com a plataforma é uma proposta. |
-| 5:02–5:48 | **Visão.** Na cópia YOLO52, abra **Módulos → Análise de pavimentação**. Envie India_008389.jpg do teste e mostre caixa, classe, confiança e latência. Corte para um exemplo de erro já anotado no pacote. | O formulário usa API e pesos auditados nessa cópia. Cite 52,24% de precisão e 32,71% de revocação nas 100 imagens de teste conhecido. Use a confiança da caixa apenas para descrever o exemplo. |
-| 5:48–6:30 | **Governança.** Retome protocolo, status e .eml ou mostre o quadro de integração em recorte breve. Mostre a matriz de urgência e encerre com o GitHub. | O núcleo público integra Front e RPA. Visão e assistente funcionam em cópias próprias. Cluster é simulação, Quântica é estudo e PLN e IoT são independentes. Explique como a revisão humana, os indicadores e o controle dos dados orientam a evolução. |
+## 00:00–00:18 CampoConecta
 
-## Preparação das telas
+O CampoConecta ajuda o pequeno produtor a registrar um problema e a equipe de assistência técnica a analisá-lo. Vou mostrar o caminho do relato até o encaminhamento e abrir as ferramentas e evidências que fazem parte da entrega.
 
-1. Use o clone do commit `3fa3b22` para Front e RPA. A partir da raiz, instale ambos os arquivos de requisitos em uma venv Python 3.12. Em terminais separados, a partir de cada subpasta, rode `python -m uvicorn app.main:app --host 127.0.0.1 --port 8000` no backend e `python -m streamlit run app.py --server.address 127.0.0.1 --server.port 8501` no frontend. Mantenha a mesma venv e aponte `API_URL` para `http://127.0.0.1:8000`. Use banco e outbox de demonstração, arquivos sintéticos e SMTP desativado.
-2. Comece pelo relato manual, aprove e só depois rode o lote. Feche o navegador ou reinicie a sessão se for regravar e use um banco limpo de demonstração para evitar confundir protocolos. Se a consulta externa atrasar, corte a espera e preserve a saída da execução. O e-mail depende dos aprovados e fica em `outbox/` por padrão.
-3. Para o chat, extraia o pacote de Generative AI e use as instruções de `docs/generative-ai/README.md`. Para Visão, extraia o pacote auditado em caminho curto, consulte o README e confira o diagnóstico dos pesos. Execute cada cópia por vez ou em portas distintas, com seu próprio frontend apontando à API correspondente. Se recorrer a uma captura ou ao vídeo original, identifique a origem e a data na tela.
-4. Para PLN, use o README da pasta `corpus_citizentech 2` e a interface independente. Para IoT, use a captura `evidencias/07_model_testing.png`. Para Cluster, use as duas capturas `captura_results_nativa.png`. Confira os caminhos no inventário.
-5. Grave a tela e narre com os controles da interface e as evidências em destaque. Use legendas e recortes que preservem os números e seus rótulos. Ensaie com cronômetro. Após editar, confirme duração entre 5:00 e 7:00, publique como **Não listado** e abra o link sem login antes de inserir no relatório.
+## 00:18–00:46 Do relato ao protocolo
+
+Para mostrar o fluxo, usamos um caso sintético. A bomba do poço quebrou e a horta está sem água desde ontem. O produtor escreve a descrição e pode deixar o CEP em branco. A API trata o texto, classifica o problema por regras neste ambiente e devolve um protocolo. A tela informa que o caso ainda aguarda conferência.
+
+## 00:46–01:20 Conferência pelo gestor
+
+No painel do gestor, encontramos o mesmo relato como pendente. A urgência sugerida ajuda a organizar a fila, mas a decisão depende da conferência. Ao aprovar, o registro muda de situação. A decisão fica ligada ao relato no banco. Esse é o ponto de controle que permite ao robô selecionar o caso para encaminhamento. O produtor também pode avaliar a classificação na tela de origem.
+
+## 01:20–01:44 Processamento do lote
+
+No painel, executamos o robô sobre o lote sintético. O Pandas lê e valida as linhas, e a consulta ao ViaCEP complementa os registros quando encontra o local. O relatório mostra cinquenta e duas linhas processadas e três em quarentena, cada uma com seu motivo.
+
+## 01:44–02:09 Mensagem preparada para os aprovados
+
+Os lotes e os relatos da tela passam pelo mesmo processamento e usam o mesmo banco. O robô seleciona os aprovados. No arquivo de e-mail está o resumo do relato da bomba de irrigação que acabamos de conferir. A mensagem foi salva localmente, sem envio. Ao reprocessar o lote, o banco preserva a decisão do gestor.
+
+## 02:09–02:26 Dois workers no iSPD
+
+No simulador i S P D, o grupo executou quinhentas tarefas independentes, de cento e trinta e seis mega flops cada. Dois workers concluíram a carga em aproximadamente trinta e quatro segundos simulados. A tela apresenta o resultado do motor.
+
+## 02:26–02:42 Quatro workers no iSPD
+
+Com quatro workers, o tempo caiu para cerca de dezessete segundos. A redução ficou perto de cinquenta por cento neste cenário. A API pública continua local. Internet, banco e revisão humana ficam fora dessa simulação.
+
+## 02:42–03:11 Como organizar a fila de revisão
+
+Os erros de urgência justificam medir quanto a equipe espera para revisar os relatos. O estudo quântico propõe começar medindo essa fila e comparando alternativas clássicas de alocação. O experimento disponível é um benchmark clássico de visitas sintéticas. No cenário severo, os dois métodos mantiveram quarenta e oito visitas pendentes, em média. Uma futura formulação de otimização híbrida depende de evidência de benefício.
+
+## 03:11–03:34 Consulta com fonte
+
+Na mesma interface, abro a aba de chuvas e enchentes e pergunto sobre atravessar uma rua alagada. O Qwen local escolhe um trecho da base curada. A tela exibe a orientação com a fonte. Quando pergunto se uma ponte foi liberada hoje, o chat informa que não consulta a situação atual.
+
+## 03:34–03:57 O teste do modelo e do fluxo
+
+No teste isolado, o modelo de um bilhão e meio de parâmetros acertou dez de vinte escolhas. No fluxo completo, a busca, os filtros e a seleção do texto atenderam a quarenta e dois de quarenta e dois casos. O modo extrativo também alcançou esse resultado. Esses números descrevem os casos do trabalho.
+
+## 03:57–04:13 Documentos entram com metadados
+
+Pela aba Módulos, abro a Fábrica de Corpus. A ferramenta roda em um serviço próprio iniciado junto ao portal. Ela extrai e normaliza o texto dos documentos, mascara padrões de dados pessoais e preserva a origem.
+
+## 04:13–04:29 Corpus e conjunto reservado
+
+A geração entrega cinquenta e dois trechos de texto, cento e doze pares de perguntas e respostas e trinta e dois diálogos. Vinte e quatro casos ficam reservados para avaliação. O assistente demonstrado usa sua própria base.
+
+## 04:29–04:43 Sinal à Vista
+
+O Sinal à Vista usa o microfone do telefone e mostra uma classe visual para ambiente, fala ou sirene. A proposta é tornar pistas sonoras mais acessíveis em situações de alagamento.
+
+## 04:43–04:58 Teste do classificador de som
+
+As quinze gravações reservadas foram classificadas corretamente no Studio. O piloto no celular foi relatado pelo grupo. A série formal de quinze tentativas ao vivo ficou sem registro. O protótipo funciona separado do portal.
+
+## 04:58–05:20 Detecção de buracos na pavimentação
+
+Na aba de pavimentação, envio a imagem reservada para teste. O Streamlit envia o arquivo à mesma API usada no portal. O YOLO identifica um possível buraco e desenha a caixa. A confiança é da detecção, e a decisão de vistoria cabe à equipe.
+
+## 05:20–05:44 Erros do detector no conjunto conhecido
+
+No teste conhecido de cem imagens, a precisão foi de cinquenta e dois vírgula vinte e quatro por cento. A revocação foi de trinta e dois vírgula setenta e um por cento. Houve falsos positivos e danos que ficaram sem detecção, como o exemplo na tela. Esses dados justificam conferência humana e avaliação em novas vias.
+
+## 05:44–06:09 O que está integrado
+
+Front, RPA, Visão e o assistente compartilham a interface e a API nesta versão local. A Fábrica de Corpus abre pelo menu como serviço separado. No mesmo menu ficam o resultado de Cluster, o estudo de Quântica e a evidência de teste do Sinal à Vista. Cada item aparece de acordo com o vínculo que tem com o portal.
+
+## 06:09–06:30 O que acompanhar no atendimento
+
+Na amostra mais difícil, as regras acertaram seis de vinte urgências. Duas situações rotuladas como críticas foram subestimadas. Por isso, a governança acompanha erros de urgência e preserva a decisão humana. Espera até a decisão e entrega confirmada são indicadores para medir em piloto.

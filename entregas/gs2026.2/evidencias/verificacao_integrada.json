@@ -1,0 +1,77 @@
+{
+  "protocolo_sintetico": "api-ab8b4421",
+  "rpa": {
+    "processados": 52,
+    "quarentena": 3,
+    "eml_conferido": true
+  },
+  "visao": {
+    "imagem": "India_008389.jpg",
+    "upload_interface": true,
+    "detector_real": true
+  },
+  "assistente": {
+    "modo": "llm",
+    "abstencao_em_tempo_real": true,
+    "fonte_visivel": true
+  },
+  "pln": {
+    "acesso_portal": true,
+    "geracao_concluida": true
+  },
+  "artefatos_no_portal": [
+    "Cluster",
+    "Quântica",
+    "IoT"
+  ],
+  "testes": {
+    "backend": {
+      "aprovados": 49
+    },
+    "frontend": {
+      "aprovados": 10
+    }
+  },
+  "avaliacao_assistente": {
+    "api_com_llm": {
+      "n": 30,
+      "acertos": 30,
+      "textos_nao_sustentados": 0,
+      "modos": {
+        "emergencia": 2,
+        "llm": 16,
+        "regra": 12
+      }
+    },
+    "verificacao_com_llm": {
+      "n": 12,
+      "acertos": 12,
+      "textos_nao_sustentados": 0,
+      "modos": {
+        "emergencia": 1,
+        "llm": 6,
+        "regra": 5
+      }
+    },
+    "api_sem_llm": {
+      "n": 30,
+      "acertos": 30,
+      "textos_nao_sustentados": 0,
+      "modos": {
+        "emergencia": 2,
+        "extrativo": 16,
+        "regra": 12
+      }
+    },
+    "verificacao_sem_llm": {
+      "n": 12,
+      "acertos": 12,
+      "textos_nao_sustentados": 0,
+      "modos": {
+        "emergencia": 1,
+        "extrativo": 6,
+        "regra": 5
+      }
+    }
+  }
+}

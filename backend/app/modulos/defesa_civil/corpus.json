@@ -1,0 +1,59 @@
+{
+  "consultado_em": "2026-11-19",
+  "documentos": [
+    {
+      "id": "midr-alagamentos",
+      "titulo": "Defesa Civil Nacional · Recomendações federais para alagamentos",
+      "url": "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/copy2_of_ComoagirAlagamentosMDR.pdf",
+      "secoes": [
+        {"id": "via", "titulo": "Travessia de via alagada", "termos": "carro moto bicicleta ônibus caminhonete atravessar passar caminho ponte rua enchente água cobrindo rodas trânsito ir cruzar correnteza condução pé", "texto": "Evite qualquer travessia de rua ou ponte alagada, inclusive de carro, moto, bicicleta ou a pé. Se já estiver no trânsito, procure um trajeto que evite a área alagada. A correnteza pode arrastar veículos."},
+        {"id": "preparo", "titulo": "Prevenção antes das chuvas", "termos": "preparar prevenção prever evitar alagamento calha ralo bueiro entupido lixo limpar casa quintal antes temporal área risco prefeitura", "texto": "Mantenha calhas e ralos limpos, descarte o lixo nos locais adequados e avise a prefeitura sobre bueiros entupidos ou destampados. Consulte a prefeitura para saber se o imóvel está em área de risco."},
+        {"id": "kit", "titulo": "Kit para saída de casa", "termos": "mochila bolsa levar guardar documentos água potável lanterna pilha roupa remédio kit emergência sair mala evacuar itens", "texto": "Prepare um kit com água potável, roupas e remédios para uma eventual saída. Mantenha lanternas e pilhas em condições de uso e guarde documentos em sacos plásticos bem fechados."},
+        {"id": "contato", "titulo": "Contato com água do alagamento", "termos": "criança crianças brincar poça enxurrada contato pisar nadar sujeira contaminada doença alagamento roupa pé", "texto": "Evite contato com a água de alagamento, que pode estar contaminada e transmitir doenças. Ajude crianças, pessoas idosas e pessoas com dificuldade de locomoção a permanecer em segurança."}
+      ]
+    },
+    {
+      "id": "dc-criciuma",
+      "titulo": "Defesa Civil de Criciúma · Perguntas frequentes",
+      "url": "https://www.defesacivil.criciuma.sc.gov.br/faq",
+      "secoes": [
+        {"id": "emergencia", "titulo": "Perigo imediato e pedido de socorro", "termos": "socorro preso ilhado ferido vítima bombeiros ligar chamar emergência casa água subindo inundando resgate", "texto": "Se houver pessoas presas ou feridas, ou se você precisar de resgate, ligue 193 (Corpo de Bombeiros). Se a água estiver subindo e houver saída segura, procure um local mais elevado. Evite atravessar áreas alagadas. Para orientação da Defesa Civil, ligue 199."},
+        {"id": "energia", "titulo": "Risco elétrico durante alagamento", "termos": "energia eletricidade choque tomada quadro disjuntor interruptor fio eletrodoméstico molhado água instalação eletrônica eletricista", "texto": "Afaste-se de equipamentos e instalações elétricas atingidos pela água. Evite tocá-los. Se a água estiver subindo e houver caminho seguro, procure um local mais elevado. Em situação de risco, acione a Defesa Civil pelo 199."}
+      ]
+    },
+    {
+      "id": "midr-inundacoes",
+      "titulo": "Defesa Civil Nacional · Inundações",
+      "url": "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/informacoes-uteis/centro-nacional-de-gerenciamento-de-riscos-e-desastres-cenad/Inundaes.pdf/%40%40download/file",
+      "secoes": [
+        {"id": "alimentos", "titulo": "Alimentos após inundação", "termos": "comida mantimento pacote geladeira feira alimento frutas comer cozinhar estragado água lamacenta contaminado reaproveitar descarte", "texto": "Descarte alimentos que tiveram contato com a água da inundação. Separe-os dos alimentos que ficaram protegidos."},
+        {"id": "poco", "titulo": "Água de poços após inundação", "termos": "cacimba cisterna poço mina nascente consumo beber água fonte natural enchente inundação propriedade abastecimento", "texto": "Evite usar água de poços ou de fontes naturais depois de uma inundação, pois ela pode estar contaminada."},
+        {"id": "limpeza", "titulo": "Limpeza após inundação", "termos": "lavar higienizar limpar desinfetar casa móveis objeto lama lixo parede utensílio volta enchente depois recuperação animais peçonhentos cobra aranha rato", "texto": "Na volta, verifique primeiro se há risco de desabamento. Retire a lama e o lixo e lave e desinfete os objetos que tiveram contato com a água. Tenha cuidado com cobras, aranhas e ratos ao mover objetos."}
+      ]
+    },
+    {
+      "id": "dc-pr-inundacao",
+      "titulo": "Defesa Civil do Paraná · Inundação",
+      "url": "https://www.defesacivil.pr.gov.br/Pagina/Inundacao",
+      "secoes": [
+        {"id": "retorno", "titulo": "Retorno à residência", "termos": "voltar retornar casa retorno baixar água inundação evacuado retirado imóvel sair abrigo residência depois passou voltar para casa", "texto": "Se você saiu ou foi retirado da residência, aguarde a água baixar e o caminho estar seguro antes de voltar. Mantenha distância de postes e de linhas elétricas caídas."}
+      ]
+    },
+    {
+      "id": "gov-alertas",
+      "titulo": "Gov.br · Serviço de avisos e alertas da Defesa Civil",
+      "url": "https://www.gov.br/pt-br/servicos/solicitar-cadastro-para-recebimento-de-avisos-e-alertas-de-desastres",
+      "secoes": [
+        {"id": "sms", "titulo": "Inscrição em alertas oficiais por SMS", "termos": "cadastrar cadastro cadastro sms chip cep celular alertas aviso receber mensagem número inscrição assinar 40199", "texto": "Para receber os alertas da Defesa Civil por SMS, envie o CEP da área de interesse para 40199. Faça o envio pelo aplicativo de mensagens do celular."}
+      ]
+    },
+    {
+      "id": "midr-alerta",
+      "titulo": "Defesa Civil Nacional · Defesa Civil Alerta",
+      "url": "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/defesa-civil-alerta",
+      "secoes": [
+        {"id": "cell", "titulo": "Alerta de emergência na tela do celular", "termos": "cell broadcast apitou toque tela notificação celular alerta automático som alarme cadastro precisa cadastrar sirene", "texto": "O Defesa Civil Alerta envia avisos de emergência aos celulares compatíveis na área de risco por Cell Broadcast. O serviço dispensa cadastro. Leia a mensagem exibida e siga a orientação da Defesa Civil."}
+      ]
+    }
+  ]
+}

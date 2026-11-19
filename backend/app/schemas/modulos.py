@@ -2,9 +2,9 @@
 
 Quem for entregar um módulo só precisa respeitar estas entradas e saídas.
 """
-from typing import Optional
+from typing import Annotated, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, StringConstraints
 
 
 class Caixa(BaseModel):
@@ -26,8 +26,8 @@ class VisaoSaida(BaseModel):
 
 
 class AssistenteEntrada(BaseModel):
-    pergunta: str = Field(min_length=3, max_length=500)
-    historico: list[dict] = []
+    pergunta: Annotated[str, StringConstraints(strip_whitespace=True, min_length=3, max_length=500)]
+    historico: list[dict] = Field(default_factory=list, max_length=8)
 
 
 class Fonte(BaseModel):
@@ -35,6 +35,8 @@ class Fonte(BaseModel):
     titulo: str
     trecho: str
     url: Optional[str] = None
+    secao: Optional[str] = None
+    consultado_em: Optional[str] = None
 
 
 class AssistenteSaida(BaseModel):
@@ -43,3 +45,6 @@ class AssistenteSaida(BaseModel):
     fontes: list[Fonte] = []
     abstencao: bool = False
     mensagem: Optional[str] = None
+    modo: Optional[str] = None
+    motivo: Optional[str] = None
+    pergunta_exibida: Optional[str] = None

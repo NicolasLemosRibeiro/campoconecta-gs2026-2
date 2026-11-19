@@ -23,10 +23,14 @@ def _pedir(metodo: str, caminho: str, **kw):
     except requests.ConnectionError as e:
         raise ApiIndisponivel("Não foi possível conectar ao serviço. Tente novamente em instantes.") from e
     if r.status_code == 422:
+        if caminho == "/modulos/assistente/perguntar":
+            raise ApiErro("Digite uma pergunta de 3 a 500 caracteres.")
         raise ApiErro("Verifique os campos: a descrição precisa de pelo menos 10 caracteres e o CEP, se informado, de 8 dígitos.")
     if r.status_code == 404:
         raise ApiErro("Esse relato não foi encontrado.")
     if r.status_code >= 500:
+        if caminho == "/modulos/assistente/perguntar":
+            raise ApiErro("O assistente está indisponível. Tente novamente em instantes.")
         raise ApiErro("O serviço teve um problema. Seu relato não foi perdido; tente de novo em alguns minutos.")
     try:
         return r.json()

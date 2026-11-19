@@ -1,0 +1,55 @@
+{
+  "val": {
+    "limiar": 0.25,
+    "imagens": 80,
+    "tp": 30,
+    "fp": 28,
+    "fn": 63,
+    "precisao": 0.5172413793103449,
+    "recall": 0.3225806451612903,
+    "f1": 0.3973509933774834
+  },
+  "teste": {
+    "limiar": 0.25,
+    "imagens": 100,
+    "tp": 35,
+    "fp": 32,
+    "fn": 72,
+    "precisao": 0.5223880597014925,
+    "recall": 0.32710280373831774,
+    "f1": 0.40229885057471265
+  },
+  "ap50": 0.3831141653741193,
+  "map50_95": 0.12304144717119425,
+  "desempenho": {
+    "imagens": 30,
+    "aquecimento": 5,
+    "media_ms": 83.19692633329699,
+    "fps": 12.019674813392488,
+    "threads_torch": 8,
+    "plataforma": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "imgsz": 640,
+    "dispositivo": "cpu"
+  },
+  "config": {
+    "modelo": "YOLO11s",
+    "imgsz": 640,
+    "imgsz_treino": 640,
+    "seed": 2026,
+    "epochs_max": 80,
+    "epocas_executadas": 64,
+    "epoca_selecionada": 46,
+    "batch": 8,
+    "device_train": "0 (Tesla T4, Colab)",
+    "continuidade": false,
+    "pesos_iniciais": "yolo11s.pt (COCO)",
+    "ultralytics_treino": "8.4.215",
+    "sha256_best": "2e0464c17a6f76349e03389d0e0739623945ef4c81ffcf4ba84c1ae4d072ba62"
+  },
+  "versoes": {
+    "torch": "2.7.1+cpu",
+    "ultralytics": "8.4.215",
+    "cv2": "4.12.0"
+  }
+}

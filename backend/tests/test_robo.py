@@ -55,8 +55,8 @@ def test_robo_csv_sem_colunas_falha_com_mensagem(tmp_path):
     assert r["status"] == "falha" and "Colunas ausentes" in r["erro_fatal"]
 
 
-def test_banco_nao_guarda_texto_original_nem_dado_pessoal():
-    robo.executar(CSV, relatorio_path="/dev/null")
+def test_banco_nao_guarda_texto_original_nem_dado_pessoal(tmp_path):
+    robo.executar(CSV, relatorio_path=str(tmp_path / "relatorio.json"))
     with db.conexao() as c:
         todos = " ".join(r["descricao_anon"] for r in db.listar(c))
     assert "123.456.789-09" not in todos and "cidadao.teste@exemplo.invalid" not in todos

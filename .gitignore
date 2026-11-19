@@ -20,3 +20,7 @@ relatorio_execucao.json
 *.pdf
 *.class
 .DS_Store
+
+# Ambiente local da demonstração
+.demonstracao/
+.assistente-local/

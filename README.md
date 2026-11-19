@@ -1,6 +1,8 @@
 # CampoConecta (CitizenTech): relatos do pequeno produtor rural
 
 
+[Iniciar a demonstração integrada no Windows](docs/DEMONSTRACAO_INTEGRADA.md)
+
 [Entregas e evidências da Global Solution 2026.2](entregas/gs2026.2/README.md)
 
 Protótipo da Global Solution 2026.2 (FIAP). O pequeno produtor relata um problema do campo (praga, clima extremo, falta de água, preço ruim, dificuldade com crédito ou seguro), a IA classifica o tipo e a urgência, uma pessoa da assistência técnica confere e um robô consolida os casos aprovados em um e-mail para o órgão ou a cooperativa responsável.

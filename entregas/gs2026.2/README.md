@@ -4,10 +4,10 @@ A entrega de Governança reúne as nove disciplinas e as evidências conferidas 
 
 - [Relatório editável](Relatorio_Governanca_CampoConecta.docx)
 - [Roteiro do vídeo integrador](Roteiro_Video_Integrador.md)
-- [Inventário de integração e evidências](Inventario_Evidencias.md)
+- [Inventário da auditoria inicial](Inventario_Evidencias.md)
 - [Conferência da entrega](Conferencia_Entrega.md)
 - [Verificações e hashes dos originais](Verificacoes_Governanca.json)
 
-Front End e RPA compartilham o fluxo público. A simulação de Cluster está em [docs/cluster](../../docs/cluster). Os demais pacotes originais e a cópia de entrega de Cluster estão na pasta [modulos](modulos/). Extraia cada ZIP em sua própria pasta para acessar código, relatórios e evidências. Visão e Generative AI têm implementações em cópias locais distintas do núcleo público.
+A [demonstração integrada](../../docs/DEMONSTRACAO_INTEGRADA.md) reúne Front End, RPA, Visão e Generative AI na mesma interface e API. O iniciador abre a ferramenta de PLN em serviço separado. Cluster, Quântica e IoT têm evidências acessíveis na aba Módulos. Consulte o [registro de teste da integração](evidencias/verificacao_integrada.json).
 
-O relatório reserva a conclusão para o grupo e contém um campo para o link do vídeo integrador.
+Os [seis ZIPs originais](modulos/) preservam os arquivos e resultados das disciplinas. O relatório reserva a conclusão ao grupo e contém um campo para o link do vídeo integrador.

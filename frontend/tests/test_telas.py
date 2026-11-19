@@ -31,7 +31,10 @@ def _app(monkeypatch, **fakes):
 def test_abre_sem_erro(monkeypatch):
     at = _app(monkeypatch)
     assert not at.exception
-    assert len(at.tabs) == 4
+    assert [aba.label for aba in at.tabs] == [
+        "Relatar problema", "Meus relatos", "Painel do gestor",
+        "Análise de pavimentação", "Chuvas e enchentes", "Módulos",
+    ]
 
 
 def _enviar(at, texto):

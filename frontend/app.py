@@ -1,6 +1,6 @@
 import streamlit as st
 
-from features import gestor, historico, modulos, reportar
+from features import assistente, gestor, historico, modulos, reportar, visao
 from state import store
 
 st.set_page_config(page_title="CampoConecta", page_icon="🌾", layout="wide")
@@ -16,7 +16,7 @@ with st.sidebar:
     st.divider()
     st.caption("Em emergência, ligue 193 (Bombeiros) ou 199 (Defesa Civil). Este sistema não substitui a assistência técnica nem o atendimento de emergência.")
 
-abas = st.tabs(["Relatar problema", "Meus relatos", "Painel do gestor", "Módulos"])
-for aba, tela in zip(abas, (reportar.tela, historico.tela, gestor.tela, modulos.tela)):
+abas = st.tabs(["Relatar problema", "Meus relatos", "Painel do gestor", "Análise de pavimentação", "Chuvas e enchentes", "Módulos"])
+for aba, tela in zip(abas, (reportar.tela, historico.tela, gestor.tela, visao.tela, assistente.tela, modulos.tela)):
     with aba:
         tela()

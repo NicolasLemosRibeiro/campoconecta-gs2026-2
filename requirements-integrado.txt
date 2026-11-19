@@ -1,0 +1,3 @@
+ultralytics==8.4.215
+opencv-python==5.1.0.95
+fonttools>=4
