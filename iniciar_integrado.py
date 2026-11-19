@@ -1,4 +1,4 @@
-"""Inicia API, interface CampoConecta e FÃ¡brica de Corpus com dados de demonstraÃ§Ã£o."""
+"""Inicia API, interface CampoConecta e Fábrica de Corpus com dados de demonstração."""
 import argparse
 import json
 import os
@@ -69,7 +69,7 @@ def esperar(url: str, processo: subprocess.Popen, limite: int = 60) -> None:
                     return
         except (URLError, TimeoutError):
             time.sleep(0.3)
-    raise RuntimeError(f"ServiÃ§o indisponÃ­vel em {url}. Confira os logs em {ESTADO}.")
+    raise RuntimeError(f"Serviço indisponível em {url}. Confira os logs em {ESTADO}.")
 
 
 def main() -> None:
@@ -83,13 +83,13 @@ def main() -> None:
     args = parser.parse_args()
     portas = [args.porta_api, args.porta_web, args.porta_pln]
     if len(set(portas)) != len(portas) or any(not 1 <= porta <= 65535 for porta in portas):
-        parser.error("Escolha trÃªs portas distintas, entre 1 e 65535.")
+        parser.error("Escolha três portas distintas, entre 1 e 65535.")
     for porta in portas:
         with socket.socket() as teste:
             try:
                 teste.bind(("127.0.0.1", porta))
             except OSError:
-                parser.error(f"A porta {porta} estÃ¡ em uso. Escolha outra pelos argumentos de porta.")
+                parser.error(f"A porta {porta} está em uso. Escolha outra pelos argumentos de porta.")
 
     ESTADO.mkdir(exist_ok=True)
     pln = preparar_pln()
@@ -133,14 +133,14 @@ def main() -> None:
         fabrica = executar("pln", pln, streamlit(args.porta_pln, pln / "app.py"))
         for url, processo in [(base_api + "/health", api), (web, interface), (corpus, fabrica)]:
             esperar(url, processo)
-        print(f"CampoConecta pronto: {web}\nFÃ¡brica de Corpus: {corpus}\nCtrl+C encerra a demonstraÃ§Ã£o.", flush=True)
+        print(f"CampoConecta pronto: {web}\nFábrica de Corpus: {corpus}\nCtrl+C encerra a demonstração.", flush=True)
         if not args.sem_abrir:
             webbrowser.open(web)
         while all(p.poll() is None for p in processos):
             time.sleep(0.5)
-        raise RuntimeError(f"Um serviÃ§o encerrou. Confira os logs em {ESTADO}.")
+        raise RuntimeError(f"Um serviço encerrou. Confira os logs em {ESTADO}.")
     except KeyboardInterrupt:
-        print("\nDemonstraÃ§Ã£o encerrada.")
+        print("\nDemonstração encerrada.")
     finally:
         for p in reversed(processos):
             if p.poll() is None:
