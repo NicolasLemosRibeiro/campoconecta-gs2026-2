@@ -1,0 +1,255 @@
+{
+  "data": "2026-11-19",
+  "ambiente_reexecucoes": "Windows x64, Python 3.12.13",
+  "nucleo_publico": {
+    "metodo": "FastAPI TestClient, persistência e .eml reais, ViaCEP indisponível simulado, SMTP e Gemini desligados",
+    "commit": "3fa3b22a2f7ed29d3e8aae5fa3362159e911a9d5",
+    "http": {
+      "saude": 200,
+      "relato_curto": 422,
+      "criacao": 201,
+      "feedback": 200,
+      "decisao": 200,
+      "rpa": 200
+    },
+    "rpa": {
+      "lidos": 55,
+      "processados": 52,
+      "rejeitados": 3,
+      "falhas_linha": 0,
+      "via_regras": 52,
+      "revisao_humana": 36,
+      "cep_resolvido": 0
+    },
+    "registros_apos_reexecucao": 53,
+    "aprovados": 1,
+    "eml_contem_relato_aprovado": true,
+    "decisao_e_feedback_preservados": true,
+    "falha_csv_ausente": "falha",
+    "slots_exibidos_pelo_backend": {
+      "visao": false,
+      "assistente": false,
+      "corpus": true,
+      "iot": true,
+      "quantica": true,
+      "governanca": true
+    },
+    "disponibilidade_real_das_rotas": {
+      "visao": false,
+      "assistente": false
+    }
+  },
+  "testes_publicos": {
+    "frontend_aprovados": 10,
+    "backend_aprovados": 32,
+    "backend_falhas": 1,
+    "backend_falha_observada": "Teste usa /dev/null, indisponível no Windows."
+  },
+  "regras_casos_novos_2": {
+    "n": 20,
+    "acertos_tipo": 11,
+    "acertos_urgencia": 6,
+    "criticos_subestimados": 2
+  },
+  "assistente_local": {
+    "testes_backend_aprovados": 43,
+    "modo_reexecutado": "extrativo, sem servidor do LLM",
+    "avaliacao": {
+      "api_sem_llm": {
+        "n": 30,
+        "acertos": 30,
+        "textos_nao_sustentados": 0
+      },
+      "verificacao_sem_llm": {
+        "n": 12,
+        "acertos": 12,
+        "textos_nao_sustentados": 0
+      }
+    }
+  },
+  "visao_local": {
+    "detector": "YOLO11s",
+    "sha256_pesos": "2e0464c17a6f76349e03389d0e0739623945ef4c81ffcf4ba84c1ae4d072ba62",
+    "ajustes": {
+      "imgsz": 640,
+      "conf": 0.25,
+      "nms_iou": 0.6
+    },
+    "versoes": {
+      "numpy": "2.5.4",
+      "opencv-python": "5.1.0.95",
+      "ultralytics": "8.4.215",
+      "torch": "2.7.1+cpu",
+      "pyarrow": "17.0.0"
+    },
+    "diagnostico": {
+      "disponivel": true,
+      "tipo_dano": "Buraco na pavimentação",
+      "confianca": 0.8552,
+      "caixas": [
+        {
+          "classe": "Buraco na pavimentação",
+          "confianca": 0.8552,
+          "x": 336.46,
+          "y": 423.74,
+          "largura": 140.6,
+          "altura": 62.81
+        }
+      ],
+      "latencia_ms": 12668.07,
+      "mensagem": "Sugestão de vistoria para revisão humana."
+    },
+    "teste_http_e_interface": {
+      "api_http": [
+        {
+          "arquivo": "India_008389.jpg",
+          "http": 200,
+          "detector_real": {
+            "disponivel": true,
+            "tipo_dano": "Buraco na pavimentação",
+            "confianca": 0.8552,
+            "caixas": [
+              {
+                "classe": "Buraco na pavimentação",
+                "confianca": 0.8552,
+                "x": 336.46,
+                "y": 423.74,
+                "largura": 140.6,
+                "altura": 62.81
+              }
+            ],
+            "latencia_ms": 4286.67,
+            "mensagem": "Sugestão de vistoria para revisão humana."
+          }
+        },
+        {
+          "arquivo": "India_000145.jpg",
+          "http": 200,
+          "detector_real": {
+            "disponivel": true,
+            "tipo_dano": null,
+            "confianca": null,
+            "caixas": [],
+            "latencia_ms": 81.53,
+            "mensagem": "Nenhum buraco foi sinalizado no limiar atual. A imagem pode não mostrar todo o dano."
+          }
+        }
+      ],
+      "imagem_invalida": {
+        "disponivel": false,
+        "tipo_dano": null,
+        "confianca": null,
+        "caixas": [],
+        "latencia_ms": 2390.5,
+        "mensagem": "Não foi possível ler a imagem enviada."
+      },
+      "apptest": {
+        "codigo_saida": 0,
+        "resultado": {
+          "tela_visao_api_real": [
+            {
+              "arquivo": "India_008389.jpg",
+              "upload_formulario_real": true,
+              "imagem_renderizada": true,
+              "tabela_com_caixas": true,
+              "sem_excecoes": true
+            },
+            {
+              "arquivo": "India_000145.jpg",
+              "upload_formulario_real": true,
+              "imagem_renderizada": true,
+              "tabela_com_caixas": false,
+              "sem_excecoes": true
+            }
+          ],
+          "limite": "Interação automatizada pelo AppTest do Streamlit, sem navegador físico ou execução nativa no macOS."
+        }
+      }
+    }
+  },
+  "pln": {
+    "testes_aprovados_windows": 31,
+    "falhas": 2,
+    "motivos": [
+      "Privilégio para link simbólico",
+      "Finais de linha diferentes na comparação binária"
+    ],
+    "comparacao_dos_jsonl_reexecutados": {
+      "paginas": 92,
+      "arquivos": {
+        "corpus_chat.jsonl": {
+          "identico_bytes": false,
+          "identico_linhas": true
+        },
+        "corpus_qa.jsonl": {
+          "identico_bytes": false,
+          "identico_linhas": true
+        },
+        "corpus_teste.jsonl": {
+          "identico_bytes": false,
+          "identico_linhas": true
+        },
+        "corpus_texto.jsonl": {
+          "identico_bytes": false,
+          "identico_linhas": true
+        }
+      }
+    }
+  },
+  "quantica": {
+    "execucoes_classicas": 120,
+    "campos_operacionais_reproduzidos": true,
+    "tempos_sao_dependentes_do_ambiente": true
+  },
+  "cluster": {
+    "origem": "Tempos dos resultados arquivados do iSPD. Reexecução da aritmética.",
+    "dois_workers_s": 34.003399999999914,
+    "quatro_workers_s": 17.005719999999958,
+    "reducao_pct": 49.988177652822955,
+    "speedup": 1.9995272179008003
+  },
+  "iot": {
+    "gravacoes_reservadas": 15,
+    "acertos_reservadas": 15,
+    "ensaio_ao_vivo_documentado": false,
+    "origem": "Relatório e captura do Studio no ZIP."
+  },
+  "arquivos_originais": {
+    "CampoConecta_YOLO52_Integracao_Auditada_19Nov2026.zip": {
+      "sha256": "9721d46efbe4d534f7ae7bb39f70e09ca9537b4de69e0698afdcdf82cdc0887d",
+      "bytes": 93417433,
+      "entradas_zip": 1415,
+      "crc_verificado": true
+    },
+    "CitizenTech-Sinal-a-Vista-IoT.zip": {
+      "sha256": "acd702d0da9d42a5a2c37ba1c05e536ed290c21faff3f6ea3d53a7717aa75902",
+      "bytes": 1790112,
+      "entradas_zip": 8,
+      "crc_verificado": true
+    },
+    "Cluster_CampoConecta_entrega.zip": {
+      "sha256": "172ad6701696d82ff32208abb693e42731921d501aa4ea4163aa7baa4f61bf57",
+      "bytes": 1467772,
+      "entradas_zip": 36,
+      "crc_verificado": true
+    },
+    "GS2026.2_Generative_AI_CampoConecta.zip": {
+      "sha256": "0b6c97bb261f2823e3e7b541407fc9fd897526103026a245d0b9ec0ade5a537e",
+      "bytes": 5466842,
+      "entradas_zip": 79,
+      "crc_verificado": true
+    },
+    "GS_PLN_CitizenTech_Entrega_Professor_19Nov2026.zip": {
+      "sha256": "00bf889452f7053126213c3b3055dfe38ce2f581468f1f80e56e7e3727278d1c",
+      "bytes": 35940264,
+      "entradas_zip": 120,
+      "crc_verificado": true
+    },
+    "GS_Quantica_CampoConecta_Final.zip": {
+      "sha256": "b8b8e579fc0e1237522bffc703cb4d3f6dc291666e7c6d173ed89f007f3c2d7c",
+      "bytes": 30694,
+      "entradas_zip": 21,
+      "crc_verificado": true
+    }
+  }
+}
