@@ -8,8 +8,8 @@
 Protótipo da Global Solution 2026.2 (FIAP). O pequeno produtor relata um problema do campo (praga, clima extremo, falta de água, preço ruim, dificuldade com crédito ou seguro), a IA classifica o tipo e a urgência, uma pessoa da assistência técnica confere e um robô consolida os casos aprovados em um e-mail para o órgão ou a cooperativa responsável.
 
 > **Integrantes:** Pedro Leal Murad — RM565460; Murilo Benhossi — RM562358; Nicolas Lemos Ribeiro — RM553273.
-> **Repositório público:** [https://github.com/murilo2318/campoconecta](https://github.com/murilo2318/campoconecta).
-> **Vídeos:** [Front](docs/videos/front.mp4) (também no [YouTube](https://youtu.be/YW0gFA5ejas)) e [RPA](docs/videos/rpa.mp4) (também no [YouTube](https://youtu.be/BdIo3TYCR-k)), um vídeo por disciplina.
+> **Repositório da entrega:** [https://github.com/NicolasLemosRibeiro/campoconecta-gs2026-2](https://github.com/NicolasLemosRibeiro/campoconecta-gs2026-2). Projeto de origem no [repositório do grupo](https://github.com/murilo2318/campoconecta).
+> **Vídeos:** [Front](docs/videos/front.mp4) (também no [YouTube](https://youtu.be/YW0gFA5ejas)) e [RPA](docs/videos/rpa.mp4) (também no [YouTube](https://youtu.be/BdIo3TYCR-k)). [Vídeo integrador de Governança](https://youtu.be/ZLIqapgsCqU).
 > **Execução:** Docker local validado; não há deploy público confirmado.
 
 
