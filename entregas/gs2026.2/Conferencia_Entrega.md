@@ -4,9 +4,9 @@ Prazo indicado pela FIAP: 19/11/2026 às 23h55 pelo Portal do Aluno, em Trabalho
 
 | Item | Preparação concluída | Passo restante |
 |---|---|---|
-| Relatório · 4 pontos | Versão integrada, editável, 15 páginas, com capa, folha de rosto, listas, sumário, introdução, nove tópicos, Governança ao final e seção Links com o vídeo publicado. | O grupo redige a seção 3 e confere o total de páginas após preencher. |
+| Relatório | Versão integrada, editável, 15 páginas, com capa, folha de rosto, listas, sumário, introdução, nove tópicos, Governança ao final, conclusão e seção Links com o vídeo publicado. | Anexar a versão integrada na entrega. |
 | Vídeo · 3 pontos | Vídeo final de 5min06s com captura da navegação, ponteiro visível e locução sincronizada. [Publicado no YouTube como Não listado](https://youtu.be/ZLIqapgsCqU), com disponibilidade confirmada sem login. | Anexar o link na entrega. |
-| GitHub · 3 pontos | Fonte executável em Windows, pacote Git com os seis ZIPs e link para as evidências, com o código da versão integrada e o relatório. | Um mantenedor com escrita importa, atualiza o relatório e publica os commits antes de enviar pelo Portal. |
+| GitHub · 3 pontos | Fonte executável em Windows, pacote Git com os seis ZIPs e link para as evidências, com o código da versão integrada e o relatório. | Um mantenedor com escrita importa o pacote e publica os commits antes de enviar pelo Portal. |
 | Portal | Relatório e repositório preparados localmente. | Enviar na disciplina e conferir os links anexados. |
 
 ## Importar a versão integrada
